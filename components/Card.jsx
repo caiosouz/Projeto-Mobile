@@ -1,13 +1,15 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const Card = () => {
+const Card = (props) => {
+  
+  const nome = 'Caio Souza'
+
     return (
         <>
             <View style={styles.card}>
-                <Text style={styles.titulo}>Caio De Souza</Text>
-                <Text>Isto é um parágrafo.</Text>
-                <Text>Isto é um parágrafo.</Text>
+                <Text style={styles.titulo}>{ props.titulo }</Text>
+                {props.children}
             </View>
         </>
     )

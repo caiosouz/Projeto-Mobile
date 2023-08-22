@@ -1,35 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Button, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Card from './components/Card';
+import Botoes from './components/Botoes';
 
 export default function App() {
   return (
-    <ScrollView style={{ marginTop: 30 }}>
+    <ScrollView style={{ margin: 10 }}>
 
-      <Card />
+      <Botoes />
 
-      <View style={styles.card}>
-        <Text style={styles.titulo}>Hello World!!</Text>
-        <Text style={styles.paragrafo}>Isto é um parágrafo.</Text>
-        <Text>Isto é um parágrafo.</Text>
-        <Text style={styles.paragrafo}>Isto é um parágrafo.</Text>
-        <StatusBar style="auto" />
-      </View>
+      <Card titulo="Sem conteúdo"/>
+      <Card titulo="Mobile">
+        <Text>React Native</Text>
+      </Card>
 
-      <Card></Card>
+      <Card titulo="Principal" nome="Caio">
+      <Text>parágrafo 1</Text>
+      <Text>parágrafo 2</Text>
+      <Text>parágrafo 3</Text>
+      <Button title='Detalhes' />
+      </Card>
+      
+      <Card titulo="Mobile"></Card>
 
-      <View style={styles.card}>
-        <Text style={styles.titulo}>Caio De Souza</Text>
-        <Text>Isto é um parágrafo.</Text>
-      </View>
-
-      <View style={styles.card}>
-        <Text style={styles.titulo}>Caio De Souza</Text>
-        <Text>Isto é um parágrafo.</Text>
-        <Text>Isto é um parágrafo.</Text>
-      </View>
-
-      <Card></Card>
+      <Card titulo="Flamengo Cheirinho"></Card>
 
     </ScrollView>
   );
